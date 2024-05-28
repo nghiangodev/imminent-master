@@ -1,1 +1,1 @@
-# imminent-master
+Coming Soon Template
