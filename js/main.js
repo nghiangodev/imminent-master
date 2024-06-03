@@ -54,9 +54,15 @@ $(window).load(function(){
 });
 /* END ------------------------------------------------------- */
 
-var nextYear = new Date().getFullYear();
+var currentYear = new Date().getFullYear();
+var targetDate = new Date("Nov 5 " + currentYear);
+
+if (new Date() > targetDate) {
+	targetDate = new Date("Nov 5 " + (currentYear + 1));
+}
+
 $('#countdown').countdown({
-	date: "Nov 5 " + nextYear,
+	date: targetDate,
 	render: function(data) {
 	  var el = $(this.el);
 	  el.empty()
